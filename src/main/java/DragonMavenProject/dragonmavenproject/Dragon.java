@@ -50,7 +50,9 @@ public class Dragon
 
 	public void addEpee(Epee epee) {
 		epees.add(epee);
-		if (epee.getOwner() != this) {
+		if (epee.getOwner() == null) {
+			epee.setOwner(this);
+		} else if (epee.getOwner() != this) {
 			epee.setOwner(this);
 		}
 	}

@@ -6,9 +6,9 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(format = { "pretty" }, features = { "src/test/resources" })
+@CucumberOptions(format = { "pretty", "html:target/cucumber" }, features = { "src/test/resources" })
 
-public class CakesRunner
+public class CakesRunnerTest
 {
 
 }

@@ -9,10 +9,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import DragonMavenProject.dragonmavenproject.AnimalCompagnie;
-import DragonMavenProject.dragonmavenproject.Dragon;
-import DragonMavenProject.dragonmavenproject.Epee;
-
 /**
  * The test class DragonTest.
  *
@@ -58,6 +54,7 @@ public class DragonTest
 	 */
 	@After
 	public void tearDown() {
+		//
 	}
 
 	@Test
@@ -121,7 +118,7 @@ public class DragonTest
 
 	@Test
 	public void petTest() {
-		AnimalCompagnie fido = new AnimalCompagnie();
+		AnimalCompagnie fido = new AnimalCompagnie("Toto");
 		defaultDragon.setPet(fido);
 
 		assertEquals(fido, defaultDragon.getPet());
