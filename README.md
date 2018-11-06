@@ -2,5 +2,5 @@
 
 # dragon-agilite
 
-A game to let players control a dragon who can wield swords and own pets.
+A game to let players control a dragon who can wield swords and own a pet.
 
