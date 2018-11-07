@@ -65,15 +65,15 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="epeesTest" time="0.003"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="gelerDragonTest" time="0.001"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="epeesTest" time="0"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="gelerDragonTest" time="0"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="associationEpeeDragonTest" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testEpees" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="orTest" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testConstructeur" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="associationDragonEpeeTest" time="0"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testEpees" time="0.001"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="orTest" time="0.001"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testConstructeur" time="0.001"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="associationDragonEpeeTest" time="0.001"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="petTest" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="temperatureSouffleDragonTest" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testGetter" time="0.001"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="temperatureSouffleDragonTest" time="0.001"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testGetter" time="0"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testSetter" time="0"/>
 </testsuite>
