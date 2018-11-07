@@ -91,7 +91,7 @@ formatter.match({
   "location": "OwnPetTest.i_want_to_add_a_pet_with_name(String)"
 });
 formatter.result({
-  "duration": 146728480,
+  "duration": 181166740,
   "status": "passed"
 });
 formatter.match({
@@ -104,7 +104,7 @@ formatter.match({
   "location": "OwnPetTest.i_can_create_a_name_and_retrieve_its(String)"
 });
 formatter.result({
-  "duration": 145630,
+  "duration": 96078,
   "status": "passed"
 });
 formatter.scenario({
@@ -141,7 +141,7 @@ formatter.match({
   "location": "OwnPetTest.i_want_to_add_a_pet_with_name(String)"
 });
 formatter.result({
-  "duration": 120296,
+  "duration": 93383,
   "status": "passed"
 });
 formatter.match({
@@ -154,7 +154,7 @@ formatter.match({
   "location": "OwnPetTest.i_can_create_a_name_and_retrieve_its(String)"
 });
 formatter.result({
-  "duration": 70404,
+  "duration": 66840,
   "status": "passed"
 });
 formatter.scenario({
@@ -184,14 +184,14 @@ formatter.match({
   "location": "OwnPetTest.that_I_have_a_pet_and_a_dragon()"
 });
 formatter.result({
-  "duration": 107413,
+  "duration": 73179,
   "status": "passed"
 });
 formatter.match({
   "location": "OwnPetTest.when_I_add_the_pet_to_the_dragon()"
 });
 formatter.result({
-  "duration": 55373,
+  "duration": 52100,
   "status": "passed"
 });
 formatter.match({
@@ -204,8 +204,51 @@ formatter.match({
   "location": "OwnPetTest.when_I_ask_for_the_dragon_s_pet_it_should_say(String)"
 });
 formatter.result({
-  "duration": 109564,
+  "duration": 84625,
   "status": "passed"
+});
+formatter.scenario({
+  "line": 20,
+  "name": "We wanted to know if a dragon owns a pet or not",
+  "description": "",
+  "id": "us02---own-a-pet;we-wanted-to-know-if-a-dragon-owns-a-pet-or-not",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 21,
+  "name": "that I have a dragon without a pet",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 22,
+  "name": "I want to know if he has one",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "I should get \"I don\u0027t have any pets\"",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "I don\u0027t have any pets",
+      "offset": 14
+    }
+  ],
+  "location": "WieldSwordTest.i_should_get(String)"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.uri("wield swords.feature");
 formatter.feature({
@@ -302,14 +345,14 @@ formatter.match({
   "location": "WieldSwordTest.i_create_a_sword_with_name(String)"
 });
 formatter.result({
-  "duration": 204524,
+  "duration": 159333,
   "status": "passed"
 });
 formatter.match({
   "location": "WieldSwordTest.when_I_ask_the_name_of_the_sword()"
 });
 formatter.result({
-  "duration": 55814,
+  "duration": 53604,
   "status": "passed"
 });
 formatter.match({
@@ -322,7 +365,7 @@ formatter.match({
   "location": "WieldSwordTest.the_name_of_the_sword_should_be(String)"
 });
 formatter.result({
-  "duration": 84968,
+  "duration": 104252,
   "status": "passed"
 });
 formatter.scenario({
@@ -352,14 +395,14 @@ formatter.match({
   "location": "WieldSwordTest.that_I_create_a_sword_named_Excalibur_and_a_dragon_called_Lolo()"
 });
 formatter.result({
-  "duration": 125436,
+  "duration": 74176,
   "status": "passed"
 });
 formatter.match({
   "location": "WieldSwordTest.i_add_Excalibur_to_Lolo()"
 });
 formatter.result({
-  "duration": 148923,
+  "duration": 71004,
   "status": "passed"
 });
 formatter.match({
@@ -372,7 +415,7 @@ formatter.match({
   "location": "WieldSwordTest.when_I_ask_for_the_first_sword_of_his_list_of_swords_it_should_say(String)"
 });
 formatter.result({
-  "duration": 113241,
+  "duration": 87091,
   "status": "passed"
 });
 formatter.scenario({
@@ -402,14 +445,14 @@ formatter.match({
   "location": "WieldSwordTest.that_I_have_a_dragon_with_two_swords()"
 });
 formatter.result({
-  "duration": 102192,
+  "duration": 278420,
   "status": "passed"
 });
 formatter.match({
   "location": "WieldSwordTest.i_want_to_print_the_number_of_swords_I_have()"
 });
 formatter.result({
-  "duration": 139788,
+  "duration": 96387,
   "status": "passed"
 });
 formatter.match({
@@ -422,7 +465,7 @@ formatter.match({
   "location": "WieldSwordTest.i_should_get(String)"
 });
 formatter.result({
-  "duration": 121813,
+  "duration": 103309,
   "status": "passed"
 });
 });

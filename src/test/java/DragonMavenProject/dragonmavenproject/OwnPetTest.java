@@ -46,4 +46,6 @@ public class OwnPetTest
 		assertEquals(expected, pet.getName());
 
 	}
+	
+	
 }
