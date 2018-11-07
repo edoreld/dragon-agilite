@@ -50,6 +50,19 @@ public class OwnPetTest
 
 	}
 	
-
+	@Given("^that I have a dragon without a pet$")
+	public void that_I_have_a_dragon_without_a_pet() throws Throwable {
+		dragonBill = new Dragon();
+	}
+	
+	@When("^I want to know if he has one$")
+	public void i_want_to_know_if_he_has_one() throws Throwable {
+		petCompanion = dragonBill.parlerDeMonAnimal();
+	}
+	
+	@Then("^I should get \"([^\"]*)\"$")
+	public void i_should_get(String petCompanion) throws Throwable {
+		assertEquals(petCompanion, actual);
+	}
 	
 }
