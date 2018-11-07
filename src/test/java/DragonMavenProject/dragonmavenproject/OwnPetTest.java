@@ -1,7 +1,6 @@
 package DragonMavenProject.dragonmavenproject;
 
 import static org.junit.Assert.assertEquals;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -61,8 +60,8 @@ public class OwnPetTest
 	}
 	
 	@Then("^I have to get \"([^\"]*)\"$")
-	public void i_should_get(String petCompanion) throws Throwable {
-		assertEquals(petCompanion, actual);
+	public void i_have_to_get(String petCompanion1) throws Throwable {
+		assertEquals(petCompanion1,petCompanion);
 	}
 	
 }

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: DragonMavenProject.dragonmavenproject.CakesRunnerTest
 -------------------------------------------------------------------------------
-Tests run: 26, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.745 sec <<< FAILURE!
-Then I have to get "I don't have any pets"(Scenario: We wanted to know if a dragon owns a pet or not)  Time elapsed: 0.005 sec  <<< FAILURE!
+Tests run: 26, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.006 sec <<< FAILURE!
+Then I have to get "I don't have any pets"(Scenario: We wanted to know if a dragon owns a pet or not)  Time elapsed: 0.006 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<I don't have any pets> but was:<null>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -11,7 +11,7 @@ java.lang.AssertionError: expected:<I don't have any pets> but was:<null>
 	at DragonMavenProject.dragonmavenproject.OwnPetTest.i_should_get(OwnPetTest.java:65)
 	at ✽.Then I have to get "I don't have any pets"(own pet.feature:23)
 
-Scenario: We wanted to know if a dragon owns a pet or not  Time elapsed: 0.015 sec  <<< FAILURE!
+Scenario: We wanted to know if a dragon owns a pet or not  Time elapsed: 0.006 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<I don't have any pets> but was:<null>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
