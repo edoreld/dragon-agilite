@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="26" failures="2" name="DragonMavenProject.dragonmavenproject.CakesRunnerTest" time="0.039" errors="0" skipped="0">
+<testsuite tests="26" failures="0" name="DragonMavenProject.dragonmavenproject.CakesRunnerTest" time="0.034" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib"/>
@@ -66,47 +66,29 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="| toto | toto |" name="When I want to add a pet with name &quot;toto&quot;" time="0"/>
-  <testcase classname="| toto | toto |" name="Then I can create a name and retrieve its &quot;toto&quot;" time="0.004"/>
-  <testcase classname="| toto | toto |" name="| toto | toto |" time="0.005"/>
-  <testcase classname="| myPet | myPet |" name="When I want to add a pet with name &quot;myPet&quot;" time="0.002"/>
-  <testcase classname="| myPet | myPet |" name="Then I can create a name and retrieve its &quot;myPet&quot;" time="0.002"/>
-  <testcase classname="| myPet | myPet |" name="| myPet | myPet |" time="0.003"/>
+  <testcase classname="| toto | toto |" name="Then I can create a name and retrieve its &quot;toto&quot;" time="0"/>
+  <testcase classname="| toto | toto |" name="| toto | toto |" time="0.001"/>
+  <testcase classname="| myPet | myPet |" name="When I want to add a pet with name &quot;myPet&quot;" time="0"/>
+  <testcase classname="| myPet | myPet |" name="Then I can create a name and retrieve its &quot;myPet&quot;" time="0"/>
+  <testcase classname="| myPet | myPet |" name="| myPet | myPet |" time="0"/>
   <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Given that I have a pet called Toto and a dragon" time="0"/>
-  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="When when I add Toto to the dragon" time="0"/>
-  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Then when I ask for the dragon pet, it should say &quot;Toto&quot;" time="0"/>
-  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Scenario: The user wants to add a pet to his dragon" time="0.003"/>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Given that I have a dragon without a pet" time="0.002"/>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="When I want to know if he has one" time="0"/>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Then I have to get &quot;I don&apos;t have any pets&quot;" time="0.006">
-    <failure message="expected:&lt;I don&apos;t have any pets&gt; but was:&lt;null&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;I don&apos;t have any pets&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at DragonMavenProject.dragonmavenproject.OwnPetTest.i_should_get(OwnPetTest.java:65)
-	at ✽.Then I have to get &quot;I don&apos;t have any pets&quot;(own pet.feature:23)
-</failure>
-  </testcase>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Scenario: We wanted to know if a dragon owns a pet or not" time="0.006">
-    <failure message="expected:&lt;I don&apos;t have any pets&gt; but was:&lt;null&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;I don&apos;t have any pets&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at DragonMavenProject.dragonmavenproject.OwnPetTest.i_should_get(OwnPetTest.java:65)
-	at ✽.Then I have to get &quot;I don&apos;t have any pets&quot;(own pet.feature:23)
-</failure>
-  </testcase>
+  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="When when I add Toto to the dragon" time="0.002"/>
+  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Then when I ask for the dragon pet, it should say &quot;Toto&quot;" time="0.001"/>
+  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Scenario: The user wants to add a pet to his dragon" time="0.001"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Given that I have a dragon without a pet" time="0"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="When I want to know if he has one" time="0.001"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Then I have to get &quot;I don&apos;t have any pets&quot;" time="0"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Scenario: We wanted to know if a dragon owns a pet or not" time="0.001"/>
   <testcase classname="| Excalibur | Excalibur |" name="Given I create a sword with name &quot;Excalibur&quot;" time="0"/>
-  <testcase classname="| Excalibur | Excalibur |" name="When when I ask the name of the sword" time="0"/>
-  <testcase classname="| Excalibur | Excalibur |" name="Then the name of the sword should be &quot;Excalibur&quot;" time="0"/>
-  <testcase classname="| Excalibur | Excalibur |" name="| Excalibur | Excalibur |" time="0.001"/>
-  <testcase classname="Scenario: we can give a sword to a dragon" name="Given that I create a sword named Excalibur and a dragon called Lolo" time="0.001"/>
-  <testcase classname="Scenario: we can give a sword to a dragon" name="When I add Excalibur to Lolo" time="0"/>
-  <testcase classname="Scenario: we can give a sword to a dragon" name="Then when I ask for the first sword of his list of swords, it should say &quot;Excalibur&quot;" time="0"/>
-  <testcase classname="Scenario: we can give a sword to a dragon" name="Scenario: we can give a sword to a dragon" time="0.003"/>
-  <testcase classname="Scenario: we can print how many swords the dragon has" name="Given that I have a dragon with two swords" time="0"/>
+  <testcase classname="| Excalibur | Excalibur |" name="When when I ask the name of the sword" time="0.001"/>
+  <testcase classname="| Excalibur | Excalibur |" name="Then the name of the sword should be &quot;Excalibur&quot;" time="0.001"/>
+  <testcase classname="| Excalibur | Excalibur |" name="| Excalibur | Excalibur |" time="0.004"/>
+  <testcase classname="Scenario: we can give a sword to a dragon" name="Given that I create a sword named Excalibur and a dragon called Lolo" time="0.003"/>
+  <testcase classname="Scenario: we can give a sword to a dragon" name="When I add Excalibur to Lolo" time="0.004"/>
+  <testcase classname="Scenario: we can give a sword to a dragon" name="Then when I ask for the first sword of his list of swords, it should say &quot;Excalibur&quot;" time="0.005"/>
+  <testcase classname="Scenario: we can give a sword to a dragon" name="Scenario: we can give a sword to a dragon" time="0.006"/>
+  <testcase classname="Scenario: we can print how many swords the dragon has" name="Given that I have a dragon with two swords" time="0.001"/>
   <testcase classname="Scenario: we can print how many swords the dragon has" name="When I want to print the number of swords I have" time="0.001"/>
   <testcase classname="Scenario: we can print how many swords the dragon has" name="Then I should get &quot;J&apos;ai 2 epees&quot;" time="0"/>
-  <testcase classname="Scenario: we can print how many swords the dragon has" name="Scenario: we can print how many swords the dragon has" time="0"/>
+  <testcase classname="Scenario: we can print how many swords the dragon has" name="Scenario: we can print how many swords the dragon has" time="0.001"/>
 </testsuite>

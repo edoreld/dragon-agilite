@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="DragonMavenProject.dragonmavenproject.DragonTest" time="0.005" errors="0" skipped="0">
+<testsuite tests="11" failures="0" name="DragonMavenProject.dragonmavenproject.DragonTest" time="0.004" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib"/>
@@ -69,11 +69,11 @@
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="gelerDragonTest" time="0"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="associationEpeeDragonTest" time="0"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testEpees" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="orTest" time="0"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="orTest" time="0.001"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testConstructeur" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="associationDragonEpeeTest" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="petTest" time="0.005"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="associationDragonEpeeTest" time="0.001"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="petTest" time="0.001"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="temperatureSouffleDragonTest" time="0"/>
-  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testGetter" time="0"/>
+  <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testGetter" time="0.001"/>
   <testcase classname="DragonMavenProject.dragonmavenproject.DragonTest" name="testSetter" time="0"/>
 </testsuite>
