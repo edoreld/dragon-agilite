@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: DragonMavenProject.dragonmavenproject.CakesRunnerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.348 sec <<< FAILURE!
-initializationError(DragonMavenProject.dragonmavenproject.CakesRunnerTest)  Time elapsed: 0.006 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.472 sec <<< FAILURE!
+initializationError(DragonMavenProject.dragonmavenproject.CakesRunnerTest)  Time elapsed: 0.007 sec  <<< ERROR!
 cucumber.runtime.DuplicateStepDefinitionException: Duplicate step definitions in DragonMavenProject.dragonmavenproject.WieldSwordTest.i_should_get(String) in file:/Users/Omardjalo/Documents/workspace/dragon-agilite/target/test-classes/ and DragonMavenProject.dragonmavenproject.OwnPetTest.i_should_get(String) in file:/Users/Omardjalo/Documents/workspace/dragon-agilite/target/test-classes/
 	at cucumber.runtime.RuntimeGlue.addStepDefinition(RuntimeGlue.java:33)
 	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:151)

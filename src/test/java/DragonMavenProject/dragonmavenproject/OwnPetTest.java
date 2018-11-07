@@ -60,7 +60,7 @@ public class OwnPetTest
 		petCompanion = dragonBill.parlerDeMonAnimal();
 	}
 	
-	@Then("^I should get \"([^\"]*)\"$")
+	@Then("^I have to get \"([^\"]*)\"$")
 	public void i_should_get(String petCompanion) throws Throwable {
 		assertEquals(petCompanion, actual);
 	}
