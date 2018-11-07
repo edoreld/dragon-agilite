@@ -1,2 +1,9 @@
 language: java
 script: mvn test
+notifications:
+  email:
+    recipients:
+      omardjalo@yahoo.fr
+      edoreld@gmail.com
+    on_success: never
+    on_failure: always
