@@ -18,9 +18,9 @@ public class OwnPetTest
 	private String	actualSword;
 
 	AnimalCompagnie	pet2;
-	
+
 	Dragon			dragonBill;
-	String petCompanion;
+	String			petCompanion1;
 
 	@Given("^that I have a pet called Toto and a dragon$")
 	public void that_I_have_a_pet_and_a_dragon() throws Throwable {
@@ -49,20 +49,20 @@ public class OwnPetTest
 		assertEquals(expected, pet.getName());
 
 	}
-	
+
 	@Given("^that I have a dragon without a pet$")
 	public void that_I_have_a_dragon_without_a_pet() throws Throwable {
 		dragonBill = new Dragon();
 	}
-	
+
 	@When("^I want to know if he has one$")
 	public void i_want_to_know_if_he_has_one() throws Throwable {
-		petCompanion = dragonBill.parlerDeMonAnimal();
+		petCompanion1 = dragonBill.parlerDeMonAnimal();
 	}
-	
+
 	@Then("^I have to get \"([^\"]*)\"$")
 	public void i_should_get(String petCompanion) throws Throwable {
-		assertEquals(petCompanion, actual);
+		assertEquals(petCompanion, petCompanion1);
 	}
-	
+
 }
