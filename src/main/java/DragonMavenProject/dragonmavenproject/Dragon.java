@@ -104,6 +104,11 @@ public class Dragon
 
 		return "J'ai " + epees.size() + " epees";
 	}
+	
+	public String parlerDeMonAnimal() {
+
+		return "I don't have any pets";
+	}
 
 	public boolean hasPet(AnimalCompagnie animalCompagnie) {
 		if (pet == animalCompagnie) {

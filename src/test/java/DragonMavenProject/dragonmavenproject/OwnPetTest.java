@@ -18,6 +18,9 @@ public class OwnPetTest
 	private String	actualSword;
 
 	AnimalCompagnie	pet2;
+	
+	Dragon			dragonBill;
+	String petCompanion;
 
 	@Given("^that I have a pet called Toto and a dragon$")
 	public void that_I_have_a_pet_and_a_dragon() throws Throwable {
@@ -47,5 +50,6 @@ public class OwnPetTest
 
 	}
 	
+
 	
 }
