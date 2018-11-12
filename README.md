@@ -4,3 +4,5 @@
 
 A game to let players control a dragon who can wield swords and own a pet.
 
+add test
+
