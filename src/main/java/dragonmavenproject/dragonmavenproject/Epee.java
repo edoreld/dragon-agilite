@@ -1,4 +1,4 @@
-package DragonMavenProject.dragonmavenproject;
+package dragonmavenproject.dragonmavenproject;
 
 /**
  * Write a description of class Epee here.

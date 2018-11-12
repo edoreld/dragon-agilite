@@ -1,4 +1,4 @@
-package DragonMavenProject.dragonmavenproject;
+package dragonmavenproject.dragonmavenproject;
 
 public class AnimalCompagnie
 {

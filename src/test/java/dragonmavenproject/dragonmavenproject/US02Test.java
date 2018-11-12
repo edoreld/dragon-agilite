@@ -1,4 +1,4 @@
-package DragonMavenProject.dragonmavenproject;
+package dragonmavenproject.dragonmavenproject;
 
 import static org.junit.Assert.assertEquals;
 
