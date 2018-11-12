@@ -2,7 +2,11 @@ language: java
 script: mvn test
 notifications:
   email:
-    recipients: omardjalo@yahoo.fr edoreld@gmail.com
+    recipients: 
+     - omardjalo@yahoo.fr 
+     - edoreld@gmail.com
+     - ser-katia@hotmail.fr
+     - mouhhamzaoui2@hotmail.com
     on_success: never
     on_failure: always
 addons:
