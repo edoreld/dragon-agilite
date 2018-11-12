@@ -1,7 +1,9 @@
-package dragonmavenproject.dragonmavenproject;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Write a description of class Dragon here.
@@ -9,15 +11,18 @@ import java.util.List;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Dragon
+
+public class Dragon implements Observer
 {
 	// instance variables - replace the example below with your own
+	private int nbOcur;
 	private String			couleur;
 	private int				or;
 	private AnimalCompagnie	pet;
 	private float			souffleDragon;
 	private List<Epee>		epees	= new ArrayList<Epee>();
-
+	private Magasin magasin = null;
+	 
 	public int getOr() {
 		return or;
 	}
@@ -60,10 +65,11 @@ public class Dragon
 	/**
 	 * Constructor for objects of class Dragon
 	 */
-	public Dragon(String couleur, int or) {
+	public Dragon(String couleur, int or,Magasin magasin) {
 		//
 		setCouleur(couleur);
 		setOr(or);
+		 this.magasin = magasin;
 
 	}
 
@@ -104,7 +110,7 @@ public class Dragon
 
 		return "J'ai " + epees.size() + " epees";
 	}
-
+	
 	public String parlerDeMonAnimal() {
 
 		return "I don't have any pets";
@@ -124,5 +130,18 @@ public class Dragon
 	public void setPet(AnimalCompagnie pet) {
 		this.pet = pet;
 	}
+
+	@Override
+	public void update(Observable obs, Object prod) {
+		 if (obs.equals(magasin))
+			 
+	      {
+			 nbOcur= magasin.nbOccuranceProduit((Produit)prod);
+			 magasin.buyProduit((Produit)prod, nbOcur);
+				
+	      }
+		
+	}
+
 
 }

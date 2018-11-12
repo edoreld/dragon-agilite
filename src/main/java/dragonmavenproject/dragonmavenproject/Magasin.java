@@ -1,121 +1,183 @@
-package dragonmavenproject.dragonmavenproject;
+package Model;
+
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Observable;
 
-public class Magasin
-{
+import Model.Caisse;
 
-	Caisse						c;
-	private String				nomProd;
-	private int					jeton	= 0;
-	private boolean				Ouvert	= true;
-	private ArrayList<Caisse>	lesCaisses;
 
-	// constructor
-	public Magasin(int jeton) {
-		this.jeton = jeton;
-		lesCaisses = new ArrayList<>();
+public class Magasin extends Observable {
+
+	
+    private Dragon owner;
+	private Caisse c;
+	private String    nomProd;
+	private int       jeton=0, Or=0 ;
+	private boolean   Ouvert=true ;
+    private ArrayList<Caisse> lesCaisses ; 
+    private List<Produit> lesProduits;
+     
+    
+   // constucotor
+   public Magasin(int jeton){
+		this.jeton=jeton;
+		this.lesCaisses =new ArrayList<>();
+		this.lesProduits = new ArrayList<>();
+   }
+	
+	
+	
+   public int getJeton(){
+	return this.jeton;	
+   }
+
+
+   public void setJeton(int jeton){
+	this.jeton=jeton;	
+   }
+
+   public boolean getOuvert(){
+   return this.Ouvert;
+   }
+
+   public void setOuvert(boolean ouvert){
+	this.Ouvert=ouvert;
+   }
+
+ 
+   public String toString(){
+	
+	return "Nombre de jeton dans le magasin :"+this.jeton;
+   }
+
+   /**
+    * premet de calculer le fond  des caisses du Magasin 
+    * @return
+    */
+   public int fondMagasin(){
+	int total =this.jeton;
+	for(Caisse c1 : this.lesCaisses){
+		
+	total = c1.getTotal()+total;
 	}
+	return total;
+   }
 
-	public int getJeton() {
-		return jeton;
+
+   /**
+    *  methode qui verifier c'est une Caisse existe dans le magasin 
+    */
+   public boolean testRelation(Caisse c){
+  
+	for(Caisse c1 : this.lesCaisses){
+	if (c.equals(c1)){
+	    return true;
+      }
+	  }
+	 return false;
+     }
+
+   public Caisse getCaisse(){
+	return this.c;
+   }
+
+
+  /**
+   * metode qui permet d'ajouter une caisse dans le magasin
+   * @param c
+   */
+  public void addCaisse(Caisse c){
+	if(lesCaisses.isEmpty()){
+		this.lesCaisses.add(c);
+		
 	}
-
-	/*
-	 * public void setJeton(int jeton) throws Exception{
-	 *
-	 * if (jeton<=0) {throw new IllegalArgumentException(); } if(jeton>0){
-	 * //Exception("On pourra pas avoir un jeton <=0 !"); this.jeton=jeton; } }
-	 */
-
-	public void setJeton(int jeton) {
-		this.jeton = jeton;
-
+	else{
+	if(nbOccuranceCaisse(c)==0){
+	lesCaisses.add(c);
 	}
-
-	public boolean getOuvert() {
-		return Ouvert;
-	}
-
-	public void setOuvert(boolean ouvert) {
-		Ouvert = ouvert;
-	}
-
-	/*
-	 * public boolean caisseOuverte(Caisse c){ return c.estOuverte(); }
-	 */
-
-	@Override
-	public String toString() {
-
-		return "Nombre de jeton dans le magasin :" + jeton;
-	}
-
-	// premet de calculer le fond des caisses du Magasin
-	public int fondMagasin() {
-		int total = jeton;
-		for (Caisse c1 : lesCaisses) {
-			total = c1.getTotal() + total;
 		}
-		return total;
-	}
+	
+   }
+  /**
+   * metode qui permet d'ajouter un produit dans un magasin
+   * si le produit est de type Arme en envoi directement un notif au Dragon 
+   * pour acheter le produit 
+   * @param prod
+   */
+  public void addProduit(Produit prod){
+	if (lesProduits.isEmpty()){
+		this.lesProduits.add(prod);
+	    if(prod.getCat().equals("Arme")){
+		    setChanged();
+		    notifyObservers(prod);
+	    }
+   } else if(isExisteProd(prod)){
+		this.lesProduits.add(prod);
+     }
+	 else{
+	   this.lesProduits.add(prod);
+	    if(prod.getCat().equals("Arme")){
+		    setChanged();
+		    notifyObservers(prod);	
+	    }
+	 }
+  }
 
-	// methode qui verifier c'est une Caisse existe dans le magasin
-	public boolean testRelation(Caisse c) {
-		boolean bool = false;
-		for (Caisse c1 : lesCaisses) {
-			if (c.equals(c1)) {
-				bool = true;
-			}
-			bool = false;
+   public int nbOccuranceProduit(Produit prod){
+	int nb =0;
+	for(Produit p1 : this.lesProduits){
+		if(p1.equals(prod))
+			nb++;
+	}
+	return nb ;
+    }
+
+    public boolean isExisteProd(Produit prod){
+	for(Produit produit : this.lesProduits){
+		if (produit.equals(prod)){
+			return true;
 		}
-		return bool;
+	 }
+	 return false;
+     }
+
+
+
+   public int nbOccuranceCaisse(Caisse c){
+	int nb =0;
+	for(Caisse c1 : this.lesCaisses){
+		if(c.equals(c1))
+			nb++;
 	}
+	return nb ;
+   }
 
-	public Caisse getCaisse(Caisse c) {
-		for (Caisse c1 : lesCaisses) {
-			if (c.equals(c1)) {
-				return c;
-			}
-		}
-		return c;
-	}
 
-	// metode qui permet d'ajouter une caisse dans le magasin
-	public void addCaisse(Caisse c) {
-		if (lesCaisses.isEmpty()) {
-			lesCaisses.add(c);
-		} else {
-			if (nbOccuranceCaisse(c) == 0) {
-				lesCaisses.add(c);
-			}
-		}
+   public ArrayList<Caisse> getList(){
+	return this.lesCaisses;
+    }
 
-	}
+   public void transactionMagasin(){
+	
+	for(Caisse c1 : this.lesCaisses){
+		this.jeton= this.jeton + c1.getTotal();
 
-	public int nbOccuranceCaisse(Caisse c) {
-		int nb = 0;
-		for (Caisse c1 : lesCaisses) {
-			if (c.equals(c1)) {
-				nb++;
-			}
-		}
-		return nb;
-	}
+	 }
+	
+   }
 
-	public ArrayList<Caisse> getList() {
-		return lesCaisses;
-	}
-
-	public int transactionMagasin() {
-
-		for (Caisse c1 : lesCaisses) {
-			jeton = jeton + c1.getTotal();
-			if (jeton >= 1000) {
-				setOuvert(false);
-			}
-		}
-		return jeton;
-	}
-
+   /**a chaque achat d'un nouveau produit ce dernier sera retirer automatiquement 
+    * du magasin
+    * 
+    * @param p
+    * @param QTe
+    */
+   public synchronized void buyProduit(Produit p, int QTe ){
+	this.jeton=this.jeton+(p.getPrix() *QTe);
+	lesProduits.remove(p);
+	
+    }
 }
