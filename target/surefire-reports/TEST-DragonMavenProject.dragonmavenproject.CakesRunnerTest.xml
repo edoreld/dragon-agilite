@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="27" failures="0" name="DragonMavenProject.dragonmavenproject.CakesRunnerTest" time="0.127" errors="0" skipped="4">
+<testsuite tests="60" failures="0" name="dragonmavenproject.dragonmavenproject.CakesRunnerTest" time="0.008" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib"/>
@@ -65,45 +65,64 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
+  <testcase classname="| 40 |" name="Given La création dun magasin comprenant 40" time="0"/>
+  <testcase classname="| 40 |" name="When l&apos;utilisateur décide de créer un magasin" time="0"/>
+  <testcase classname="| 40 |" name="Then Création du magasin" time="0"/>
+  <testcase classname="| 40 |" name="| 40 |" time="0"/>
+  <testcase classname="| 40 |" name="Given La création dun magasin comprenant 40" time="0"/>
+  <testcase classname="| 40 |" name="When l&apos;utilisateur décide de créer un magasin" time="0"/>
+  <testcase classname="| 40 |" name="Then Création du magasin" time="0"/>
+  <testcase classname="| 40 |" name="| 40 |" time="0"/>
+  <testcase classname="| YES | NO |" name="Given voir letat du magasin which si elle est ouverte ou YES" time="0"/>
+  <testcase classname="| YES | NO |" name="When lutilisateur Décide de modifier louverture du magasin NO" time="0"/>
+  <testcase classname="| YES | NO |" name="Then état du magasin est modifié" time="0"/>
+  <testcase classname="| YES | NO |" name="| YES | NO |" time="0.001"/>
+  <testcase classname="Scenario: vérifier si les caisses existent dans le magasin" name="Given La vérification  dune caisse dans un magasin   comprenant" time="0"/>
+  <testcase classname="Scenario: vérifier si les caisses existent dans le magasin" name="When l&apos;utilisateur souhaite vérifier une caisse dans un magasin" time="0.001"/>
+  <testcase classname="Scenario: vérifier si les caisses existent dans le magasin" name="Then La caisse est attribuer dans ce Magsin" time="0"/>
+  <testcase classname="Scenario: vérifier si les caisses existent dans le magasin" name="Scenario: vérifier si les caisses existent dans le magasin" time="0"/>
+  <testcase classname="Scenario: vérifier Caisse si elle est ouverte" name="Given étant donnée une caisse" time="0"/>
+  <testcase classname="Scenario: vérifier Caisse si elle est ouverte" name="When l&apos;utilisateur décide de vérifier si la caisse est ouverte ou pas" time="0"/>
+  <testcase classname="Scenario: vérifier Caisse si elle est ouverte" name="And la transaction" time="0"/>
+  <testcase classname="Scenario: vérifier Caisse si elle est ouverte" name="And vérifier le fond de la ciasse aprés une transaction" time="0"/>
+  <testcase classname="Scenario: vérifier Caisse si elle est ouverte" name="Then renvoie l&apos;état de la caisse(ouverte ou pas)" time="0"/>
+  <testcase classname="Scenario: vérifier Caisse si elle est ouverte" name="Scenario: vérifier Caisse si elle est ouverte" time="0.001"/>
+  <testcase classname="Scenario: CaissePanne : responsable dois vérifier si la caisse est en panne ou pas" name="Given étant donne une caisse existante" time="0"/>
+  <testcase classname="Scenario: CaissePanne : responsable dois vérifier si la caisse est en panne ou pas" name="When quand l&apos;utilisateur souhaite verifier la panne d&apos;une caisse" time="0"/>
+  <testcase classname="Scenario: CaissePanne : responsable dois vérifier si la caisse est en panne ou pas" name="Then l&apos;état de la caisse est renvoyée" time="0"/>
+  <testcase classname="Scenario: CaissePanne : responsable dois vérifier si la caisse est en panne ou pas" name="Scenario: CaissePanne : responsable dois vérifier si la caisse est en panne ou pas" time="0"/>
+  <testcase classname="Scenario: si la caisse est en panne alors le responsable fera appel a un reparateur, pour reparer la panne" name="Given étant donnée une caisse qui est en panne" time="0"/>
+  <testcase classname="Scenario: si la caisse est en panne alors le responsable fera appel a un reparateur, pour reparer la panne" name="When l&apos;utilisateur décide réparer la caisse" time="0"/>
+  <testcase classname="Scenario: si la caisse est en panne alors le responsable fera appel a un reparateur, pour reparer la panne" name="Then la caisse est réparé" time="0"/>
+  <testcase classname="Scenario: si la caisse est en panne alors le responsable fera appel a un reparateur, pour reparer la panne" name="Scenario: si la caisse est en panne alors le responsable fera appel a un reparateur, pour reparer la panne" time="0"/>
+  <testcase classname="Scenario: transaction passé dans le magasin" name="Given somme de tous les fonds de caisse 40 avec les jetons 70 qu&apos;on a dans le magasin" time="0"/>
+  <testcase classname="Scenario: transaction passé dans le magasin" name="When l&apos;utilisateur décide d&apos;avoir le total des fonds dans le magasin" time="0"/>
+  <testcase classname="Scenario: transaction passé dans le magasin" name="Then Total des fonds dans le magasin 110" time="0"/>
+  <testcase classname="Scenario: transaction passé dans le magasin" name="Scenario: transaction passé dans le magasin" time="0.001"/>
   <testcase classname="| toto | toto |" name="When I want to add a pet with name &quot;toto&quot;" time="0"/>
   <testcase classname="| toto | toto |" name="Then I can create a name and retrieve its &quot;toto&quot;" time="0"/>
-  <testcase classname="| toto | toto |" name="| toto | toto |" time="0.001"/>
+  <testcase classname="| toto | toto |" name="| toto | toto |" time="0.004"/>
   <testcase classname="| myPet | myPet |" name="When I want to add a pet with name &quot;myPet&quot;" time="0"/>
   <testcase classname="| myPet | myPet |" name="Then I can create a name and retrieve its &quot;myPet&quot;" time="0"/>
-  <testcase classname="| myPet | myPet |" name="| myPet | myPet |" time="0.001"/>
-  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Given that I have a pet called Toto and a dragon" time="0.001"/>
-  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="When when I add Toto to the dragon" time="0.001"/>
+  <testcase classname="| myPet | myPet |" name="| myPet | myPet |" time="0"/>
+  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Given that I have a pet called Toto and a dragon" time="0"/>
+  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="When when I add Toto to the dragon" time="0"/>
   <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Then when I ask for the dragon pet, it should say &quot;Toto&quot;" time="0"/>
-  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Scenario: The user wants to add a pet to his dragon" time="0.001"/>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Given that I have a dragon without a pet" time="0.012">
-    <skipped/>
-    <system-out>
-  Scenario: The user wants to add a pet to his dragon        &amp;#27;[90m# own pet.feature:15&amp;#27;[0m
-    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mthat I have a pet called Toto and a dragon&amp;#27;[0m         &amp;#27;[90m# OwnPetTest.that_I_have_a_pet_and_a_dragon()&amp;#27;[0m
-    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mwhen I add Toto to the dragon&amp;#27;[0m                       &amp;#27;[90m# OwnPetTest.when_I_add_the_pet_to_the_dragon()&amp;#27;[0m
-    &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mwhen I ask for the dragon pet, it should say &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mToto&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m &amp;#27;[90m# OwnPetTest.when_I_ask_for_the_dragon_s_pet_it_should_say(String)&amp;#27;[0m
-</system-out>
-  </testcase>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="When I want to know if he has one" time="0.017">
-    <skipped/>
-  </testcase>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Then I should get &quot;I don&apos;t have any pets&quot;" time="0.021">
-    <skipped/>
-  </testcase>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Scenario: We wanted to know if a dragon owns a pet or not" time="0.022">
-    <skipped/>
-  </testcase>
-  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Scenario: We wanted to know if a dragon owns a pet or not" time="0.022"/>
+  <testcase classname="Scenario: The user wants to add a pet to his dragon" name="Scenario: The user wants to add a pet to his dragon" time="0"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Given that I have a dragon without a pet" time="0"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="When I want to know if he has one" time="0"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Then I have to get &quot;I don&apos;t have any pets&quot;" time="0"/>
+  <testcase classname="Scenario: We wanted to know if a dragon owns a pet or not" name="Scenario: We wanted to know if a dragon owns a pet or not" time="0"/>
   <testcase classname="| Excalibur | Excalibur |" name="Given I create a sword with name &quot;Excalibur&quot;" time="0"/>
-  <testcase classname="| Excalibur | Excalibur |" name="When when I ask the name of the sword" time="0.001"/>
+  <testcase classname="| Excalibur | Excalibur |" name="When when I ask the name of the sword" time="0"/>
   <testcase classname="| Excalibur | Excalibur |" name="Then the name of the sword should be &quot;Excalibur&quot;" time="0"/>
-  <testcase classname="| Excalibur | Excalibur |" name="| Excalibur | Excalibur |" time="0.001"/>
+  <testcase classname="| Excalibur | Excalibur |" name="| Excalibur | Excalibur |" time="0"/>
   <testcase classname="Scenario: we can give a sword to a dragon" name="Given that I create a sword named Excalibur and a dragon called Lolo" time="0"/>
   <testcase classname="Scenario: we can give a sword to a dragon" name="When I add Excalibur to Lolo" time="0"/>
-  <testcase classname="Scenario: we can give a sword to a dragon" name="Then when I ask for the first sword of his list of swords, it should say &quot;Excalibur&quot;" time="0.002"/>
-  <testcase classname="Scenario: we can give a sword to a dragon" name="Scenario: we can give a sword to a dragon" time="0.003"/>
-  <testcase classname="Scenario: we can print how many swords the dragon has" name="Given that I have a dragon with two swords" time="0.001"/>
-  <testcase classname="Scenario: we can print how many swords the dragon has" name="When I want to print the number of swords I have" time="0.009"/>
-  <testcase classname="Scenario: we can print how many swords the dragon has" name="Then I should get &quot;J&apos;ai 2 epees&quot;" time="0.005"/>
-  <testcase classname="Scenario: we can print how many swords the dragon has" name="Scenario: we can print how many swords the dragon has" time="0.006"/>
+  <testcase classname="Scenario: we can give a sword to a dragon" name="Then when I ask for the first sword of his list of swords, it should say &quot;Excalibur&quot;" time="0"/>
+  <testcase classname="Scenario: we can give a sword to a dragon" name="Scenario: we can give a sword to a dragon" time="0"/>
+  <testcase classname="Scenario: we can print how many swords the dragon has" name="Given that I have a dragon with two swords" time="0"/>
+  <testcase classname="Scenario: we can print how many swords the dragon has" name="When I want to print the number of swords I have" time="0"/>
+  <testcase classname="Scenario: we can print how many swords the dragon has" name="Then I should get &quot;J&apos;ai 2 epees&quot;" time="0"/>
+  <testcase classname="Scenario: we can print how many swords the dragon has" name="Scenario: we can print how many swords the dragon has" time="0"/>
 </testsuite>

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: DragonMavenProject.dragonmavenproject.EpeeTest
+Test set: dragonmavenproject.dragonmavenproject.EpeeTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 sec

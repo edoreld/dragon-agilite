@@ -18,6 +18,6 @@ Feature: US02 - Own a pet
 		Then when I ask for the dragon pet, it should say "Toto"
 		
   Scenario: We wanted to know if a dragon owns a pet or not
-	Given that I have a dragon without a pet
+  	Given that I have a dragon without a pet
 		When I want to know if he has one
-		Then I should get "I don't have any pets"
+		Then I have to get "I don't have any pets"
