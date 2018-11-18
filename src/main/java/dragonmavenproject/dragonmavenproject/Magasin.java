@@ -1,4 +1,4 @@
-package Model;
+package dragonmavenproject.dragonmavenproject;
 
 
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Observable;
 
-import Model.Caisse;
+
 
 
 public class Magasin extends Observable {
@@ -160,12 +160,13 @@ public class Magasin extends Observable {
 	return this.lesCaisses;
     }
 
-   public void transactionMagasin(){
-	
+   public int transactionMagasin(){
+	int result=0 ;
 	for(Caisse c1 : this.lesCaisses){
-		this.jeton= this.jeton + c1.getTotal();
+		result= this.jeton + c1.getTotal();
 
 	 }
+	return result;
 	
    }
 

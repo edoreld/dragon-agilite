@@ -1,4 +1,4 @@
-package Model;
+package dragonmavenproject.dragonmavenproject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +21,7 @@ public class Dragon implements Observer
 	private AnimalCompagnie	pet;
 	private float			souffleDragon;
 	private List<Epee>		epees	= new ArrayList<Epee>();
+	private List<Produit> lesArmes =new ArrayList<>();
 	private Magasin magasin = null;
 	 
 	public int getOr() {
@@ -138,10 +139,19 @@ public class Dragon implements Observer
 	      {
 			 nbOcur= magasin.nbOccuranceProduit((Produit)prod);
 			 magasin.buyProduit((Produit)prod, nbOcur);
+			 lesArmes.add((Produit)prod);
 				
 	      }
-		
-	}
+	}	
+    public boolean isArme(Produit prod)
+    {
+		for(Produit arme : this.lesArmes){
+			if(arme.equals(prod))
+			  return true;
+			 }
+			 return false;
+		 }
+	
 
 
 }

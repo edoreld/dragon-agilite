@@ -1,4 +1,4 @@
-package Model;
+package dragonmavenproject.dragonmavenproject;
 
 import java.util.Random;
 
