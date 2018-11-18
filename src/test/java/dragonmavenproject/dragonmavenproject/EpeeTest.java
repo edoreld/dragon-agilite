@@ -19,6 +19,7 @@ public class EpeeTest
 	Epee	caliburnus;
 	Epee	twinkle;
 	Dragon	defaultDragon;
+	private Magasin magasin1;
 
 	/**
 	 * Sets up the test fixture.
@@ -31,7 +32,8 @@ public class EpeeTest
 	}
 
 	private void initializerVariables() {
-		dragon = new Dragon("rouge", 666);
+		magasin1 = new  Magasin(30);
+		dragon = new Dragon("rouge", 666,magasin1);
 		excalibur = new Epee("Excalibur");
 		caliburnus = new Epee("Caliburnus");
 		twinkle = new Epee("Twinkle");

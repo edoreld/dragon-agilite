@@ -31,7 +31,7 @@ public class US02Test
 	@Then("^La caisse est attribuer dans ce Magsin$")
 	public void la_caisse_est_attribuer_dans_ce_Magsin() throws Exception {
 
-		assertEquals(false, magasin1.testRelation(caisse1)); // permet de
+		assertEquals(true, magasin1.testRelation(caisse1)); // permet de
 																// verfier si
 																// une caisse
 																// existe dans
