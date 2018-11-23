@@ -15,16 +15,16 @@ import java.util.Observer;
 public class Dragon implements Observer
 {
 	// instance variables - replace the example below with your own
-	private int nbOcur;
+	private int				nbOcur;
 	private String			couleur;
-	private int				or;
+	private double			or;
 	private AnimalCompagnie	pet;
 	private float			souffleDragon;
-	private List<Epee>		epees	= new ArrayList<Epee>();
-	private List<Produit> lesArmes =new ArrayList<>();
-	private Magasin magasin = null;
-	 
-	public int getOr() {
+	private List<Epee>		epees		= new ArrayList<Epee>();
+	private List<Produit>	lesArmes	= new ArrayList<>();
+	private Magasin			magasin		= null;
+
+	public double getOr() {
 		return or;
 	}
 
@@ -32,7 +32,7 @@ public class Dragon implements Observer
 		return couleur;
 	}
 
-	public void setOr(int or) {
+	public void setOr(double or) {
 		this.or = or;
 	}
 
@@ -66,11 +66,21 @@ public class Dragon implements Observer
 	/**
 	 * Constructor for objects of class Dragon
 	 */
-	public Dragon(String couleur, int or,Magasin magasin) {
+	public Dragon(String couleur, double or, Magasin magasin) {
 		//
 		setCouleur(couleur);
 		setOr(or);
-		 this.magasin = magasin;
+		this.magasin = magasin;
+
+	}
+
+	/**
+	 * Constructor for objects of class Dragon
+	 */
+	public Dragon(String couleur, double or) {
+		//
+		setCouleur(couleur);
+		setOr(or);
 
 	}
 
@@ -111,7 +121,7 @@ public class Dragon implements Observer
 
 		return "J'ai " + epees.size() + " epees";
 	}
-	
+
 	public String parlerDeMonAnimal() {
 
 		return "I don't have any pets";
@@ -134,24 +144,23 @@ public class Dragon implements Observer
 
 	@Override
 	public void update(Observable obs, Object prod) {
-		 if (obs.equals(magasin))
-			 
-	      {
-			 nbOcur= magasin.nbOccuranceProduit((Produit)prod);
-			 magasin.buyProduit((Produit)prod, nbOcur);
-			 lesArmes.add((Produit)prod);
-				
-	      }
-	}	
-    public boolean isArme(Produit prod)
-    {
-		for(Produit arme : this.lesArmes){
-			if(arme.equals(prod))
-			  return true;
-			 }
-			 return false;
-		 }
-	
+		if (obs.equals(magasin))
 
+		{
+			nbOcur = magasin.nbOccuranceProduit((Produit) prod);
+			magasin.buyProduit((Produit) prod, nbOcur);
+			lesArmes.add((Produit) prod);
+
+		}
+	}
+
+	public boolean isArme(Produit prod) {
+		for (Produit arme : lesArmes) {
+			if (arme.equals(prod)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 }
