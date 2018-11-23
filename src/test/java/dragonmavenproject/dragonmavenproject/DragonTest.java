@@ -166,7 +166,7 @@ public class DragonTest
 	       Dragon dragon = new Dragon("red",100,magasin);
 	        magasin.addProduit(prod);
 	        magasin.addProduit(prod);
-	        magasin.addObserver(dragon);
+	        magasin.ajouterObservateur(dragon);
 
 	        magasin.addProduit(prod1);
 	        assertEquals(2,magasin.nbOccuranceProduit(prod));

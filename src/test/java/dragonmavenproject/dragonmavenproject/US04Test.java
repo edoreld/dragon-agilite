@@ -28,7 +28,7 @@ public void creation_du_dragon_qui_prend_Or_et_avec_une(int or, String couleur) 
 public void un_nouveau_produit_sera_disponible_dans_le_magasin_de_type(String categories) throws Throwable {
 	arme = new Produit("Epee", 50, categories);
 	aliment= new Produit("Sugar", 5, "alimentaire");
-	magasin.addObserver(lolo);
+	magasin.ajouterObservateur(lolo);
     magasin.addProduit(arme);
     magasin.addProduit(aliment);
     
