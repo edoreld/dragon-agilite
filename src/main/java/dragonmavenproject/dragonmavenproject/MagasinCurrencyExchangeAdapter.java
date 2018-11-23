@@ -26,7 +26,6 @@ public class MagasinCurrencyExchangeAdapter implements MagasinInterface
 			// and remove the corresponding amount of gold from the dragon's
 			// reserves
 			dragon.setOr((jetonsDragon - p.getPrix() * QTe) / exchangeRate);
-			System.out.println(dragon.getOr());
 		} else {
 			System.out.println("Not enough gold");
 		}
