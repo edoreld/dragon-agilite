@@ -12,7 +12,7 @@ import java.util.Observer;
  * @version (a version number or a date)
  */
 
-public class Dragon implements Observer
+public class Dragon implements Observateur
 {
 	// instance variables - replace the example below with your own
 	private int nbOcur;
@@ -133,7 +133,7 @@ public class Dragon implements Observer
 	}
 
 	@Override
-	public void update(Observable obs, Object prod) {
+	public void update(Magasin obs, Object prod) {
 		 if (obs.equals(magasin))
 			 
 	      {

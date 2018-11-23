@@ -4,12 +4,12 @@ package dragonmavenproject.dragonmavenproject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Observable;
+//import java.util.Observable;
 
 
 
 
-public class Magasin extends Observable {
+public class Magasin implements Observable {
 
 	
     private Dragon owner;
@@ -19,6 +19,7 @@ public class Magasin extends Observable {
 	private boolean   Ouvert=true ;
     private ArrayList<Caisse> lesCaisses ; 
     private List<Produit> lesProduits;
+    private ArrayList tabObservateur;// Tableau d'observateurs.
      
     
    // constucotor
@@ -26,6 +27,7 @@ public class Magasin extends Observable {
 		this.jeton=jeton;
 		this.lesCaisses =new ArrayList<>();
 		this.lesProduits = new ArrayList<>();
+		tabObservateur=new ArrayList();
    }
 	
 	
@@ -111,8 +113,9 @@ public class Magasin extends Observable {
 	if (lesProduits.isEmpty()){
 		this.lesProduits.add(prod);
 	    if(prod.getCat().equals("Arme")){
-		    setChanged();
-		    notifyObservers(prod);
+		  //  setChanged();
+		  //  notifyObservers(prod);
+	    	notifierObservateurs(prod);
 	    }
    } else if(isExisteProd(prod)){
 		this.lesProduits.add(prod);
@@ -120,8 +123,9 @@ public class Magasin extends Observable {
 	 else{
 	   this.lesProduits.add(prod);
 	    if(prod.getCat().equals("Arme")){
-		    setChanged();
-		    notifyObservers(prod);	
+		   // setChanged();
+		    //notifyObservers(prod);
+	    	notifierObservateurs(prod);
 	    }
 	 }
   }
@@ -181,4 +185,32 @@ public class Magasin extends Observable {
 	lesProduits.remove(p);
 	
     }
+   
+
+   @Override
+   public void notifierObservateurs(Object ob)
+   {
+           for(int i=0;i<tabObservateur.size();i++)
+           {
+                   Observateur o = (Observateur) tabObservateur.get(i);
+                   o.update(this,ob);// On utilise la méthode "tiré".
+           }
+   }
+
+
+
+@Override
+public void ajouterObservateur(Observateur o) {
+     tabObservateur.add(o);
+	
+}
+
+
+
+@Override
+public void supprimerObservateur(Observateur o) {
+	 tabObservateur.remove(o);  
+	
+}
+
 }
