@@ -1,6 +1,5 @@
 package dragonmavenproject.dragonmavenproject;
 
-
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
@@ -23,8 +22,7 @@ public class DragonTest
 	private Epee	excalibur;
 	private Epee	twinkle;
 	private Epee	caliburnus;
-	private Magasin magasin1;
-	
+	private Magasin	magasin1;
 
 	/**
 	 * Default constructor for test class DragonTest
@@ -44,7 +42,7 @@ public class DragonTest
 
 	private void initializerVariables() {
 		magasin1 = new Magasin(30);
-		dragon = new Dragon("rouge", 666,magasin1);
+		dragon = new Dragon("rouge", 666, magasin1);
 		excalibur = new Epee("Excalibur");
 		caliburnus = new Epee("Caliburnus");
 		twinkle = new Epee("Twinkle");
@@ -64,30 +62,30 @@ public class DragonTest
 	@Test
 	public void testGetter() {
 		assertEquals(defaultDragon.getCouleur(), "red");
-		assertEquals(defaultDragon.getOr(), 0);
+		assertEquals(defaultDragon.getOr(), 0, 0.1);
 	}
 
 	@Test
 	public void testSetter() {
 		defaultDragon.setCouleur("gris");
 		defaultDragon.setOr(23);
-		assertEquals(defaultDragon.getOr(), 23);
+		assertEquals(defaultDragon.getOr(), 23, 0.1);
 		assertEquals(defaultDragon.getCouleur(), "gris");
 	}
 
 	@Test
 	public void testConstructeur() {
-		magasin1 = new  Magasin(30);
-		Dragon testDragon = new Dragon("bleu", 1000,magasin1);
-		assertEquals(testDragon.getOr(), 1000);
+		magasin1 = new Magasin(30);
+		Dragon testDragon = new Dragon("bleu", 1000, magasin1);
+		assertEquals(testDragon.getOr(), 1000, 0.1);
 		assertEquals(testDragon.getCouleur(), "bleu");
 
 	}
 
 	@Test
 	public void associationDragonEpeeTest() {
-		magasin1 = new  Magasin(30);
-		Dragon smaug = new Dragon("Smaug", 836,magasin1);
+		magasin1 = new Magasin(30);
+		Dragon smaug = new Dragon("Smaug", 836, magasin1);
 		Epee epeeMagique = new Epee("excalibur");
 
 		smaug.addEpee(epeeMagique);
@@ -97,8 +95,8 @@ public class DragonTest
 
 	@Test
 	public void associationEpeeDragonTest() {
-		magasin1 = new  Magasin(30);
-		Dragon smaug = new Dragon("Smaug", 836,magasin1);
+		magasin1 = new Magasin(30);
+		Dragon smaug = new Dragon("Smaug", 836, magasin1);
 		Epee epeeMagique = new Epee("Excalibur");
 		Epee uneAutreEpeeMagique = new Epee("Zulfiqar");
 
@@ -143,7 +141,7 @@ public class DragonTest
 	@Test
 	public void orTest() {
 		defaultDragon.setOr(9001);
-		assertEquals(9001, defaultDragon.getOr());
+		assertEquals(9001, defaultDragon.getOr(), 0.1);
 	}
 
 	@Test
@@ -158,6 +156,7 @@ public class DragonTest
 		assertEquals(mesEpees, defaultDragon.getEpees());
 
 	}
+
 	@Test
 	public void patternTest(){
 		 Magasin magasin = new Magasin(30);
@@ -173,155 +172,150 @@ public class DragonTest
 	        assertEquals(0, magasin.nbOccuranceProduit(prod1));
 		
 	}
-	
+
 	/*----------------------------------------------------------------------------*/
 	/*--------------------------  Test pour le magasin --------------------------*/
 	/*---------------------------------------------------------------------------*/
-	
 
 	@Test
-	public void testGetters(){
-		int jeton = 30 ;
+	public void testGetters() {
+		int jeton = 30;
 		Magasin m = new Magasin(30);
-		 assertEquals(jeton ,m.getJeton());
-		
+		assertEquals(jeton, m.getJeton());
+
 	}
-	
+
 	@Test
-	public void testConstructor(){
-		int Jeton=30;
+	public void testConstructor() {
+		int Jeton = 30;
 		ArrayList<Caisse> Caisse = new ArrayList<>();
-		Magasin m =                new Magasin(30);
-		assertEquals(Caisse.isEmpty() , m.getList().isEmpty()); //test si la liste est vide
-		assertEquals(Jeton,m.getJeton());   // tester la valeur du jeton    
-		
-		 
+		Magasin m = new Magasin(30);
+		assertEquals(Caisse.isEmpty(), m.getList().isEmpty()); // test si la
+																// liste est
+																// vide
+		assertEquals(Jeton, m.getJeton()); // tester la valeur du jeton
+
 	}
-	
-	@Test 
-	public void testConstructorCaisse(){
-		String nom ="C1";   int total = 50 ; 
-		
+
+	@Test
+	public void testConstructorCaisse() {
+		String nom = "C1";
+		int total = 50;
+
 		Magasin m1 = new Magasin(20);
-		Caisse c =   new Caisse("C1", 50, m1);
+		Caisse c = new Caisse("C1", 50, m1);
 		assertEquals(nom, c.getName());
 		assertEquals(total, c.getTotal());
-		
+
 	}
-	
+
 	@Test
-	public void testSetters(){
-		
-		Magasin m1 =new Magasin(20);
-		Caisse c =new Caisse("C1", 50, m1);
+	public void testSetters() {
+
+		Magasin m1 = new Magasin(20);
+		Caisse c = new Caisse("C1", 50, m1);
 		assertEquals(50, c.getTotal());
 		c.setTotal(30);
 		c.setNom("C2");
-		assertEquals(30,c.getTotal());
+		assertEquals(30, c.getTotal());
 		assertEquals("C2", c.getName());
 	}
 
-	
 	@Test
-	public void  testOuverture(){
+	public void testOuverture() {
 		Magasin m = new Magasin(20);
-		Caisse c =  new Caisse("C1", 80, m);
-		assertEquals(100,c.transaction());	
+		Caisse c = new Caisse("C1", 80, m);
+		assertEquals(100, c.transaction());
 	}
-	
-	@Test 
-	public void testTransaction(){
+
+	@Test
+	public void testTransaction() {
 		Magasin m1 = new Magasin(20);
 		Caisse c = new Caisse("C1", 50, m1);
 		c.transaction();
-		assertEquals(true, m1.getOuvert());	
-		
+		assertEquals(true, m1.getOuvert());
+
 	}
-	
+
 	@Test
-	public void testEstOuverteCaisse(){
+	public void testEstOuverteCaisse() {
 		Magasin m = new Magasin(20);
 		Magasin zara = new Magasin(20);
 		Caisse c = new Caisse("C1", 50, m);
-		assertEquals(true,c.estOuverte());
-		assertEquals(false,c.estVide());
+		assertEquals(true, c.estOuverte());
+		assertEquals(false, c.estVide());
 		c.setTotal(80);
 		c.transaction();
-		assertEquals(false,c.estOuverte());
+		assertEquals(false, c.estOuverte());
 		c.setMagasin(zara);
 		assertEquals(zara, c.getMagasin());
-		
+
 	}
-	
+
 	@Test
-    public void TestesVide() throws Exception{
+	public void TestesVide() throws Exception {
 		Magasin m = new Magasin(0);
-		Caisse caisse1= new Caisse("C1", 0, m); // Caisse vide
-		assertEquals(true,caisse1.estVide());
+		Caisse caisse1 = new Caisse("C1", 0, m); // Caisse vide
+		assertEquals(true, caisse1.estVide());
 		m.setJeton(20);
 		caisse1.transaction();
 		assertEquals(false, caisse1.estVide());
 	}
-	
-	
-	
-	@Test 
-	public void testFondMagasin(){
-		Magasin zara  =new Magasin(20);
-		Magasin nike  =new Magasin(30);
-		Caisse  c1 =new Caisse("c1", 30, zara);  //caisse dans le magasin zara
-		Caisse  c2 =new Caisse("c1", 30, zara);  // caisse dans le magasin zara
-		Caisse  c3 =new Caisse("c1", 30, zara);  // caisse dans le magasin nike
+
+	@Test
+	public void testFondMagasin() {
+		Magasin zara = new Magasin(20);
+		Magasin nike = new Magasin(30);
+		Caisse c1 = new Caisse("c1", 30, zara); // caisse dans le magasin zara
+		Caisse c2 = new Caisse("c1", 30, zara); // caisse dans le magasin zara
+		Caisse c3 = new Caisse("c1", 30, zara); // caisse dans le magasin nike
 		zara.addCaisse(c1); // add caisse dans le magasin
 		zara.addCaisse(c2);
-		
+
 		assertEquals(80, zara.fondMagasin());
-		
+
 	}
 
+	@Test
+	public void testToStringMagasin() {
+
+		Magasin m = new Magasin(20);
+		String chaine = "Nombre de jeton dans le magasin :" + m.getJeton();
+		assertEquals(chaine, m.toString());
+	}
 
 	@Test
-	public void testToStringMagasin(){
-		
-		Magasin m =new Magasin(20);
-		String chaine = "Nombre de jeton dans le magasin :"+m.getJeton();
-		assertEquals(chaine,m.toString());
-	}
-    
-	@Test
-	public void testToStringCaisse(){
-		Magasin m =new Magasin(20);
-		Caisse c =new Caisse("c1", 30, m);
+	public void testToStringCaisse() {
+		Magasin m = new Magasin(20);
+		Caisse c = new Caisse("c1", 30, m);
 		m.getCaisse();
-		String chaine = " Caisse :"+c.getName()+" Fond de la Caisse : "+c.getTotal(); 
-		assertEquals(chaine,c.toString());
+		String chaine = " Caisse :" + c.getName() + " Fond de la Caisse : " + c.getTotal();
+		assertEquals(chaine, c.toString());
 	}
 
-	
-	@Test 
-	public void testAddCaisse(){
-		Magasin m =new Magasin(20);
-		Caisse c =new Caisse("cc",20,m);
-		Caisse c1 =new Caisse("c2",20,m);
-		Caisse c3 =new Caisse("c2",20,m);
+	@Test
+	public void testAddCaisse() {
+		Magasin m = new Magasin(20);
+		Caisse c = new Caisse("cc", 20, m);
+		Caisse c1 = new Caisse("c2", 20, m);
+		Caisse c3 = new Caisse("c2", 20, m);
 		c.getPanne();
 		m.addCaisse(c);
-		m.addCaisse(c1);   m.addCaisse(c1);
-		assertEquals(1, m.nbOccuranceCaisse(c1));	
-		
+		m.addCaisse(c1);
+		m.addCaisse(c1);
+		assertEquals(1, m.nbOccuranceCaisse(c1));
+
 	}
-	
+
 	@Test
-	public void testPanneCaisse(){
-		  Magasin m =new Magasin(34);
-		  Caisse c =new Caisse("c1", 30, m);
-		  c.setPanne(82);                  // on cree une panne en caisse
-		  assertEquals(true,c.caissePanne()) ;// return true
-		  c.reparPanne();                   // On repare la caisse
-		  assertEquals(false, c.caissePanne());
-		  
-		
+	public void testPanneCaisse() {
+		Magasin m = new Magasin(34);
+		Caisse c = new Caisse("c1", 30, m);
+		c.setPanne(82); // on cree une panne en caisse
+		assertEquals(true, c.caissePanne());// return true
+		c.reparPanne(); // On repare la caisse
+		assertEquals(false, c.caissePanne());
+
 	}
-	
-	
+
 }
