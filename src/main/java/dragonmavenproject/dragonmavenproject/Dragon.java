@@ -23,7 +23,7 @@ public class Dragon implements Observateur
 	private List<Epee>		epees		= new ArrayList<Epee>();
 	private List<Produit>	lesArmes	= new ArrayList<>();
 	private Magasin			magasin		= null;
-
+	MagasinCurrencyExchangeAdapter Magas_Exchange;
 	public double getOr() {
 		return or;
 	}
@@ -144,15 +144,18 @@ public class Dragon implements Observateur
 
 	@Override
 	public void update(Magasin obs, Object prod) {
+		Produit arme = (Produit)prod;
 		 if (obs.equals(magasin))
 			 
 	      {
-			 nbOcur= magasin.nbOccuranceProduit((Produit)prod);
-			 magasin.buyProduit((Produit)prod, nbOcur);
-			 lesArmes.add((Produit)prod);
+			 nbOcur= magasin.nbOccuranceProduit(arme);
+			 Magas_Exchange = new MagasinCurrencyExchangeAdapter(magasin);
+			 Magas_Exchange.buyProduit(arme, nbOcur, this);
+			 lesArmes.add(arme);
 				
 	      }
 	}	
+	
     public boolean isArme(Produit prod)
     {
 		for(Produit arme : this.lesArmes){
