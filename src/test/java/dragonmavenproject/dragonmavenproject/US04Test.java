@@ -37,8 +37,8 @@ public void un_nouveau_produit_sera_disponible_dans_le_magasin_de_type(String ca
 
 @Then("^Le dragon recevera une alerte pour acheter le nouveau produit$")
 public void le_dragon_recevera_une_alerte_pour_acheter_le_nouveau_produit() throws Throwable {
-   assertEquals(true,lolo.isArme(arme)); // isArme Test si l'arme existe dans le dragon 
-   assertEquals(false,lolo.isArme(aliment)); // n'existe pas car le produit est de type aliment 
+   assertEquals(true,lolo.isArme(arme)); // isArme Test si l'arme est acheté par  le dragon 
+   assertEquals(false,lolo.isArme(aliment)); // n'existe pas car le produit est de categorie aliment 
 
 }
 
