@@ -113,16 +113,19 @@ public class Magasin implements Observable {
 	if (lesProduits.isEmpty()){
 		this.lesProduits.add(prod);
 	    if(prod.getCat().equals("Arme")){
-	    	notifierObservateurs(prod); // notification si produit =Arme
+	    // notification si produit =Arme
+	    	notifierObservateurs(prod); 
 	    }
    } else if(isExisteProd(prod)){
-		this.lesProduits.add(prod); // ajoute produit sans notification (produit arme existe dans le magasin)
+// ajoute produit sans notification 
+		this.lesProduits.add(prod); 
      }
 	 else{
 	   this.lesProduits.add(prod);
 	    if(prod.getCat().equals("Arme")){
-	
-	    	notifierObservateurs(prod); // ajouter un nouveau produit = Arme
+	    	
+	    	// ajouter un nouveau produit = Arme
+	      	notifierObservateurs(prod); 
 	    }
 	 }
   }

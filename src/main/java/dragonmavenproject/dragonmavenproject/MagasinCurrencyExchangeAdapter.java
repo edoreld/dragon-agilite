@@ -8,7 +8,7 @@ public class MagasinCurrencyExchangeAdapter implements MagasinInterface
 	static double	EXCHANGE_RATE_OR_JETON	= 7.254;
 
 	public MagasinCurrencyExchangeAdapter(Magasin magasin) {
-		this.magasin = magasin;
+		this.magasin =magasin;
 	}
 
 	@Override
