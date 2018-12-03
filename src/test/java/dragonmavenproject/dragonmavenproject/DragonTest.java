@@ -1,6 +1,6 @@
 package dragonmavenproject.dragonmavenproject;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -317,5 +317,46 @@ public class DragonTest
 		assertEquals(false, c.caissePanne());
 
 	}
+  
+	 @Test
+	 public void testPattern(){
+		 Magasin magasin = new Magasin(30);
+		 Dragon lolo = new Dragon("red", 30,magasin);
+		 Produit arme =new Produit("EA75", 20, "Arme");
+		 Produit aliment =new Produit("E000", 12, "Aliment");
+		 magasin.ajouterObservateur(lolo); // ajouter un observateur Dragon 
+		 magasin.addProduit(arme);        // ajouter une arme dans le magasin
+		 magasin.addProduit(aliment);    // ajouter un produit aliment dans le magasin
+		 assertEquals(true,lolo.isArme(arme));// true car le Dragon a acheter le produit Arme et il a ajouter dans ses armes
+		 assertEquals(false,lolo.isArme(aliment)); // false car n'est pas un arme
+		 assertEquals(0,magasin.nbOccuranceProduit(arme)); // le nombre d'occurence du produit  est a 0 car le produit est vendu au dragon
+		 assertEquals(1,magasin.nbOccuranceProduit(aliment)); //== 1 car le produit est un aliment(Le magasin n'envoi pas de notification)
 
+		 
+	 }
+	 
+	 @Test
+	 public void testIsArme()
+	 {
+		 Magasin magasin = new Magasin(30);
+		 Dragon lolo = new Dragon("red", 30,magasin);
+		 Produit arme =new Produit("EA75", 20, "Arme");
+		 magasin.ajouterObservateur(lolo); // ajouter un observateur Dragon 
+		 magasin.addProduit(arme);        // ajouter une arme dans le magasin
+         assertEquals(true, lolo.isArme(arme)); // arme acheté par le dragon 
+		 
+	 }
+	 
+	/* @Test
+	 public void testPatternAdapter(){
+		 double exchange = MagasinCurrencyExchangeAdapter.EXCHANGE_RATE_OR_JETON;
+		 Magasin magasin = new Magasin(30);
+		 Dragon lolo = new Dragon("red", 2.0);
+		 Produit arme =new Produit("EA75", 3, "Arme");
+		 magasin.addProduit(arme);
+		 MagasinCurrencyExchangeAdapter mag = new MagasinCurrencyExchangeAdapter(magasin);
+		 mag.buyProduit(arme,1,lolo);
+		 assertTrue(dragon.getOr()<=2.0);
+	 
+    } */
 }
